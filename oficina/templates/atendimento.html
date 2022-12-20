@@ -1,9 +1,18 @@
 {% extends 'base.html' %}
 
-<h1>olá</h1>
-<p>
-    sffffffffgsf
-    sffgsgsgfsf
-    gggsgfggg
-    gs\gggsgfggg
-</p>
+{% block conteudo %}
+
+<div class="container">
+    <h1 class="display6" style="font-size: 30px; center; color: silver"> Registrar atendimento </h1>
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form_atend }} 
+          
+        <a href=" {% url 'atendimento.html' %} ">
+            <input class="btn btn-primary" type="submit"  value="Cadastrar">
+        </a>
+    </form>
+</div>
+
+{% endblock %}

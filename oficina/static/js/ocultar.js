@@ -24,8 +24,7 @@ $("#select").change(function () {
   $(val).hide();
   $(img).hide();
 
-  if (value === "pneu") {
-    console.log("Mizera dos inferno");
+  if (value.toLowerCase() === "pneu") {
     $(largura).show();
     $(perfil).show();
     $(tamanho).show();
@@ -35,7 +34,7 @@ $("#select").change(function () {
     $(img).show();
   }
 
-  if (value === "aro") {
+  if (value.toLowerCase() === "aro") {
     $(largura).show();
     $(perfil).show();
     $(tamanho).show();
@@ -47,7 +46,7 @@ $("#select").change(function () {
     $(img).show();
   }
 
-  if (value === "raio") {
+  if (value.toLowerCase() === "raio") {
     $(largura).show();
     $(perfil).show();
     $(tamanho).show();
@@ -60,7 +59,7 @@ $("#select").change(function () {
     $(img).show();
   }
 
-  if (value === "farol") {
+  if (value.toLowerCase() === "farol") {
     $(tamanho).show();
     $(tipo).show();
     $(material).hide();
@@ -69,7 +68,7 @@ $("#select").change(function () {
     $(val).show();
     $(img).show();
   }
-  if (value === "retrovisor") {
+  if (value.toLowerCase() === "retrovisor") {
     $(tamanho).show();
     $(tipo).show();
     $(material).show();

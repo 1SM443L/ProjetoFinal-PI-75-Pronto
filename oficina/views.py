@@ -63,4 +63,12 @@ def Retrovisores(request):
     return render (request, "retrovisores.html", {'pneus' : lista_retrovisores})
 
 def Atendimento(request):
-    return render (request, "atendimento.html")
+    if request.method == 'POST':
+        form_atend = AtendimentoForms(request.POST)
+        if form_atend.is_valid():
+            form_atend.save()
+            form_atend = AtendimentoForms()
+    else:
+        form_atend = AtendimentoForms()
+    
+    return render (request,"atendimento.html", {'form_atend' : form_atend })

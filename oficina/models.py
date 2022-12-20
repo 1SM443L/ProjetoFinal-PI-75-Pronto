@@ -33,6 +33,8 @@ class Produto(models.Model):
     marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     
+    def __str__(self) -> str:
+        return self.categoria
    
 class Servico(models.Model):
     descricao = models.TextField()
